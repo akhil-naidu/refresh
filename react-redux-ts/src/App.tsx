@@ -1,10 +1,10 @@
 import React from 'react';
-import NewNoteInterface from './components/NewNoteInterface';
+import NewNoteInterface from './components/NewNoteInput';
 
 function App() {
   return (
     <React.Fragment>
-      <NewNoteInterface />
+      <NewNoteInterface addNote={alert} />
 
       <ul>
         <li>Some Note</li>
