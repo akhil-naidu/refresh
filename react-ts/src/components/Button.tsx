@@ -7,8 +7,13 @@ type ButtonProps = {
   handleClickEvent?: (event: React.MouseEvent<HTMLButtonElement>) => void;
 };
 
-export const Button = (props: ButtonProps) => {
-  const { voidButton, handleClickVoid, handleClickEvent } = props;
+// Props can also be destructured while defining
+export const Button = ({
+  voidButton,
+  handleClickVoid,
+  handleClickEvent,
+}: ButtonProps) => {
+  // const { voidButton, handleClickVoid, handleClickEvent } = props;
   return (
     <button onClick={voidButton ? handleClickVoid : handleClickEvent}>
       Click It
