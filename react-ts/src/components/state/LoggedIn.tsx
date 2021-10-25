@@ -9,6 +9,11 @@ type AuthUserName = {
 export const LoggedIn = () => {
   const [isLoggedIn, setIsLoggedIn] = useState(false);
   const [user, setUser] = useState<AuthUserName | null>(null); // This is highly useful if the AuthUserName is an object that consists both name and email
+
+  // If you use this then there is no use of checking, user?.name
+  // Only use this if you are sure that the user.name value will never become null
+  // const [user, setUser] = useState<AuthUserName>({} as AuthUserName);
+  // What we are saying here is that we know things here better than compiler
   const [messageCount, setMessageCount] = useState(0);
 
   const handleLogIn = () => {
