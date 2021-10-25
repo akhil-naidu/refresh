@@ -1,7 +1,7 @@
 // Remember a component props is an object, so is the variable below
 // Also, use types while building apps and interfaces while building libraries, also because of the latest updates there are hardly any differences these days.
 type GreetProps = {
-  name: string; // Sting Prop Example
+  name: string | null | undefined; // Sting Prop Example // undefined is added later
   messageCount?: number; // Number Prop Example // ? signifies optional prop
   isLoggedIn: boolean; // Boolean Prop Example
 };
