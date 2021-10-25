@@ -7,6 +7,7 @@ import { PersonList } from './components/PersonList';
 import { Status } from './components/Status';
 import { SubHeading } from './components/SubHeading';
 import { Input } from './components/Input';
+import { LoggedIn } from './components/state/LoggedIn';
 
 function App() {
   const personName = {
@@ -35,6 +36,9 @@ function App() {
       <Greet name="Akhil" messageCount={20} isLoggedIn={false} />
       {/* Now I don't want to send the message count prop, we will introduce an optional prop (?) */}
       <Greet name="Akhil" isLoggedIn={true} />
+      <hr />
+      <LoggedIn />
+      <hr />
       <Person name={personName} />
       <PersonList names={nameList} />
       <hr />
