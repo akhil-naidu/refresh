@@ -1,10 +1,12 @@
 import './App.css';
+import { Button } from './components/Button';
 import { Greet } from './components/Greet';
 import { Oscar } from './components/Oscar';
 import { Person } from './components/Person';
 import { PersonList } from './components/PersonList';
 import { Status } from './components/Status';
 import { SubHeading } from './components/SubHeading';
+import { Input } from './components/Input';
 
 function App() {
   const personName = {
@@ -46,6 +48,21 @@ function App() {
       </Oscar>
       {/* <Status status="loading" /> */}
       <Status status="success" />
+      <hr />
+      <Button
+        handleClickVoid={() => alert('No Event void button clicked')}
+        voidButton={true}
+      />
+      <br />
+      <Button
+        handleClickEvent={(event) => {
+          console.log(event);
+          alert('Event void button clicked, check console for the event');
+        }}
+        voidButton={false}
+      />
+      <br />
+      <Input />
     </div>
   );
 }
